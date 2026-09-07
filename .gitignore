@@ -1,0 +1,18 @@
+node_modules/
+dist/
+*.log
+*.bak
+.env
+.env.*
+!.env.example
+coverage/
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
+.omo/
+
+# real key pool — never commit
+tavily.keys
+secrets/
+*.keys
+!tavily.keys.example

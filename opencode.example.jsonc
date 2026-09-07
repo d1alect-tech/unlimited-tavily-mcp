@@ -1,0 +1,19 @@
+{
+  "mcp": {
+    "tavily": {
+      "type": "local",
+      // "bun" must be on PATH; or use an absolute path to the bun binary.
+      // Replace the second argument with the absolute path to your checkout.
+      "command": [
+        "bun",
+        "/absolute/path/to/unlimited-tavily-mcp/src/index.ts"
+      ],
+      // Optional: keys default to ~/.config/opencode/secrets/tavily.keys
+      "environment": {
+        "TAVILY_API_KEYS_FILE": "~/.config/opencode/secrets/tavily.keys"
+      },
+      "enabled": true,
+      "timeout": 970000
+    }
+  }
+}
