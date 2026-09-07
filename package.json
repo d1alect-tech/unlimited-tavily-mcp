@@ -1,0 +1,32 @@
+{
+  "name": "unlimited-tavily-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local stdio MCP proxy that round-robins Tavily API keys against the official remote MCP",
+  "type": "module",
+  "scripts": {
+    "start": "bun src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d1alect-tech/unlimited-tavily-mcp.git"
+  },
+  "keywords": [
+    "mcp",
+    "tavily",
+    "opencode"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "typescript": "5.9.3"
+  }
+}
