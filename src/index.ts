@@ -23,7 +23,7 @@ const CONNECTION_COOLDOWN = 30_000;
 const DEFAULT_KEYS_FILE = join(homedir(), ".config", "opencode", "secrets", "tavily.keys");
 
 async function main(): Promise<void> {
-  const keysFile = process.env["TAVILY_API_KEYS_FILE"] ?? DEFAULT_KEYS_FILE;
+  const keysFile = (process.env["TAVILY_API_KEYS_FILE"] ?? DEFAULT_KEYS_FILE).replace(/^~(?=[/\\]|$)/u, homedir());
 
   const keys = parseKeys(await readFile(keysFile, "utf8"));
   if (keys.length === 0) {
